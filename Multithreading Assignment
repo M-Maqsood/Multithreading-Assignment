@@ -1,0 +1,85 @@
+Q1. what is multithreading in python? hy is it used? Name the module used to handle threads in python.
+
+    Python multithreading enables efficient utilization of the resources as the threads share the data space and memory. Multithreading in Python allows the concurrent and parallel occurrence of various tasks. 
+    It causes a reduction in time consumption or response time, thereby increasing the performance.
+    The threading module is a high-level implementation of multithreading used to deploy an application in Python. 
+    To use multithreading, we need to import the threading module in Python Program. A start() method is used to initiate the activity of a thread.
+
+Q2. why threading module used? write the use of the following functions
+
+    Python multithreading enables efficient utilization of the resources as the threads share the data space and memory. Multithreading in Python allows the concurrent and parallel occurrence of various tasks. 
+    It causes a reduction in time consumption or response time, thereby increasing the performance.
+    1. activeCount()
+        In Python, the method threading.activeCount() from the threading module is used to count the currently active or running threads.
+        threading.active_count()
+        
+    2. currentThread()
+        current_thread() is an inbuilt method of the threading module in Python. It is used to return the current Thread object, which corresponds to the caller's thread of control.
+    3. enumerate()
+        enumerate is a built-in function in python that allows you to keep track of the number of iterations (loops) in a loop. This enumerate object contains a count (from the start, which always defaults to 0) and a value obtained from iterating over the iterable object.
+    
+    
+    
+Q3. Explain the following functions
+
+    1. run() - The run() method executes any target function belonging to a given thread object that is now active. 
+    2. start() - A start method is the technique used to start child processes in Python. There are three start methods, they are: spawn: start a new Python process. fork: copy a Python process from an existing process. forkserver: new process from which future forked processes will be copied.
+    3. join() - The join in Python takes all the elements of an iterable and joins them into a single string. It will return the joined string. You have to specify a string separator that will be used to separate the concatenated string.
+    4. isAlive() - The isAlive() method checks whether a thread is still executing. getName() − The getName() method returns the name of a thread. setName() − The setName() method sets the name of a thread.
+    
+Q4. write a python program to create two threads. Thread one must print the list of squares and thread two must print the list of cubes
+    
+    import threading
+  
+    def cal_sqre(num):
+        sq_list = []
+        for n in num: 
+            sq_list.append(n**2)
+        print(sq_list)
+
+
+    def cal_cube(num): 
+        cub_list = []
+        for n in num:   
+            cub_list.append(n**3)
+        print(cub_list)
+    list1 = [4, 5, 6, 7, 2] 
+
+    cal_sqre(list1)  
+    cal_cube(list1)  
+
+
+Q5. State advantages and disadvantages of multithreading
+
+    Advantages of multithreading:
+
+        1. Enhanced performance by decreased development time
+        2. Simplified and streamlined program coding
+        3. Improvised GUI responsiveness
+        4. Simultaneous and parallelized occurrence of tasks
+        5. Better use of cache storage by utilization of resources
+        6. Decreased cost of maintenance
+        7. Better use of CPU resource
+
+    Disadvantages of multithreading:
+    
+        1. Complex debugging and testing processes
+        2. Overhead switching of context
+        3. Increased potential for deadlock occurrence
+        4. Increased difficulty level in writing a program
+        5. Unpredictable results
+
+
+Q6. Explain deadlocks and race conditions.
+
+    A most common operational issue with multi-threaded applications, a racing attack is an unwanted situation referring to the incidences when a multithread tool tries to accomplish more than one task at a time. But, the predefined sequencing of that specific program/device will not let it happen as the device/software must follow the default sequence. 
+    A deeper understanding of race condition definition reveals that there are multiple race condition types. The key ones are explained here:
+
+        1. Critical ones will influence the terminating stage of a program or device and force it to modify.
+        2. Non-critical ones haVe no direct impact on the end stage or action of the concerning devices/resources.
+    
+    Both share some similarities, such as they both occur in multi-thread solutions and hamper device performance. However, both are not the same.
+    A race condition occurs when two threads use the same variable at a given time. Deadlock exists when two threads seek one lock simultaneously.  
+    This situation will stop both threads from processing or executing the functions. In racing, two tasks compete with each other and try to complete a task before each other.
+    In a deadlock, two processes are waiting and expecting the complementary process to complete the task.
+    
